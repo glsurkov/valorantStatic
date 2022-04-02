@@ -1,0 +1,42 @@
+@use './UI';
+@use './header';
+@use './wrapper';
+@use './champions';
+@use './footer';
+@use './news';
+@use './trailer';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+html{
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x:hidden;
+}
+
+#root{
+  width: 100%;
+}
+
+.App{
+  margin: auto;
+  width: 100%;
+  padding:100px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 1000px) {
+    padding: 50px 75px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 20px 35px;
+  }
+}
