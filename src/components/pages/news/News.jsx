@@ -26,15 +26,15 @@ const News = () => {
     return (
         <main className = "news-main">
             <Suspense fallback = {<div className='loader'></div>}>
-            <div className="news">
-                <Article onClick = {activeModal} name = {'art #1'} img = {article__image1}/>
-                <Article onClick = {activeModal} name = {'art #2'} img = {article__image2}/>
-                <Article onClick = {activeModal} name = {'art #3'} img = {article__image3}/>
-                <Article onClick = {activeModal} name = {'art #4'} img = {article__image4}/>
-                <Article onClick = {activeModal} name = {'art #5'} img = {article__image5}/>
-                <Article onClick = {activeModal} name = {'art #6'} img = {article__image6}/>
-                <Article onClick = {activeModal} name = {'art #7'} img = {article__image7}/>
-            </div>
+                <div className="news">
+                    <Article onClick = {activeModal} name = {'art #1'} img = {article__image1}/>
+                    <Article onClick = {activeModal} name = {'art #2'} img = {article__image2}/>
+                    <Article onClick = {activeModal} name = {'art #3'} img = {article__image3}/>
+                    <Article onClick = {activeModal} name = {'art #4'} img = {article__image4}/>
+                    <Article onClick = {activeModal} name = {'art #5'} img = {article__image5}/>
+                    <Article onClick = {activeModal} name = {'art #6'} img = {article__image6}/>
+                    <Article onClick = {activeModal} name = {'art #7'} img = {article__image7}/>
+                </div>
             </Suspense>
             <ModalWindow visible = {visible}
                          setVisible = {setVisible}

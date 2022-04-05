@@ -23,6 +23,8 @@ import {changeHero} from "../../API/HeroAPI";
 
 const Champions = () => {
 
+    console.log('Рендер')
+
     const elemRef = useRef();
 
     function activeHero(){

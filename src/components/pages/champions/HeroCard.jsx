@@ -1,5 +1,6 @@
 import React from 'react';
 import SpellCard from "./SpellCard";
+import LoadedImage from "../news/LoadedImage";
 
 const HeroCard = (props) => {
 
@@ -8,7 +9,7 @@ const HeroCard = (props) => {
         <>
         <div onClick = {e => { return props.onClick(e)}} className='hero-wrapper'>
             <div className="hero-card">
-                <img className="hero-card__image" src={props.hero}/>
+                <LoadedImage classname = 'hero-card__image' img = {props.hero}/>
             </div>
             <h1 className = "hero-title hero-wrapper__hero-title">{props.name}</h1>
             <h2 className = "hero-wrapper__hero-country">{props.country}</h2>

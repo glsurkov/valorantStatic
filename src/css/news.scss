@@ -9,6 +9,7 @@ $article-title:white;
 }
 
 .news{
+  width: 100%;
   display: grid;
   grid-gap:10px;
   grid-template-columns: repeat(6,1fr);
@@ -22,9 +23,15 @@ $article-title:white;
 
   &__image{
     display: block;
+    opacity: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+
+    &--loaded {
+      opacity: 1;
+    }
     
     @media (max-width: 860px) {
       object-position: top;
@@ -87,6 +94,12 @@ $article-title:white;
     top:10%;
     left:5%;
   }
+}
+
+.image-container{
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
 }
 
 .article-title{
