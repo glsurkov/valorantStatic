@@ -1,24 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React/*, {useEffect, useRef, useState}*/ from 'react';
+import {useLoadImage} from "../../hooks/useLoadImage";
 
 const LoadedImage = (props) => {
 
-    const imageRef = useRef()
-    const [isLoaded,setLoaded] = useState(false)
-    const [classes,setClasses] = useState([props.classname])
-
-    console.log('Рендер картинок')
-
-    useEffect(() => {
-        if(imageRef){
-            imageRef.current.onload = () =>{
-                setLoaded(true)
-            }
-        }
-    },[])
-
-    useEffect(() => {
-            setClasses([props.classname,`${props.classname}--loaded`])
-    },[isLoaded])
+    const {imageRef,classes} = useLoadImage(props.classname)
 
     return (
         <div className="image-container">

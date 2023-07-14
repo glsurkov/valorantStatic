@@ -1,9 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import './css/application.css'
-import Header from './components/header/Header'
+import Header from './components/UI/Header'
 import Champions from "./components/pages/champions/Champions";
-import Footer from "./components/header/Footer";
+import Footer from "./components/UI/Footer";
 import News from './components/pages/news/News'
 import {useAuth0} from "@auth0/auth0-react";
 import TrailerPage from "./components/pages/game/TrailerPage";

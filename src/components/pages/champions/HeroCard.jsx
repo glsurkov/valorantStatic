@@ -2,35 +2,34 @@ import React from 'react';
 import SpellCard from "./SpellCard";
 import LoadedImage from "../news/LoadedImage";
 
-const HeroCard = (props) => {
+const HeroCard = ({spells,hero,name,onClick}) => {
 
 
     return (
         <>
-        <div onClick = {e => { return props.onClick(e)}} className='hero-wrapper'>
+        <div onClick = {e => { return onClick(e)}} className='hero-wrapper'>
             <div className="hero-card">
-                <LoadedImage classname = 'hero-card__image' img = {props.hero}/>
+                <LoadedImage classname = 'hero-card__image' img = {hero}/>
             </div>
-            <h1 className = "hero-title hero-wrapper__hero-title">{props.name}</h1>
-            <h2 className = "hero-wrapper__hero-country">{props.country}</h2>
+            <h1 className = "hero-title hero-wrapper__hero-title">{name}</h1>
             <div className="spell-board">
-                {props.spells.map((spell,id)=>
-                    <img className='spell spell-board__spell' src={spell} key ={id} alt='hero-spell'/>
+                {spells.map((spell)=>
+                    <img className='spell spell-board__spell' src={spell.displayIcon} key ={spell.slot} alt='hero-spell'/>
                 )}
             </div>
         </div>
         <div className = 'spellinfo-bar'>
-            <SpellCard spell={props.spells[0]}
+            <SpellCard spell={spells[0].displayIcon}
                        id={1}
                        name = {'spell name'}
                        type = {'BASIC'}
                        info = {'Info about this ability'}/>
-            <SpellCard spell={props.spells[2]}
+            <SpellCard spell={spells[2].displayIcon}
                        id={2}
                        name = {'spell name'}
                        type = {'SIGNATURE'}
                        info = {'Info about this ability'}/>
-            <SpellCard spell={props.spells[3]}
+            <SpellCard spell={spells[3].displayIcon}
                        id={3}
                        name = {'spell name'}
                        type = {'ULTIMATE'}

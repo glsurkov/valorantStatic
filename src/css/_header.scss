@@ -96,8 +96,8 @@ $burger-menu: rgba(255,255,255,1);
     padding: 10px;
     height:80px;
     width:160px;
-    right:0;
-    top:0;
+    right:10.5%;
+    top:22%;
     position: absolute;
     z-index: 3;
   }
@@ -145,6 +145,9 @@ $burger-menu: rgba(255,255,255,1);
   }
 
   &__link{
+
+    font-size: 0.8rem;
+
     @media (max-width: 860px) {
       font-size: 11px;
     }

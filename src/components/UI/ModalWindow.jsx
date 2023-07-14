@@ -1,32 +1,30 @@
 import React from 'react';
 
-const ModalWindow = (props) => {
+const ModalWindow = ({visible, setVisible, window_style, content_style,children}) => {
 
-    const classes = ['modal-window'];
+    const classes = ["modal-window", ...window_style]
+    const classes2 = ["modal-window__content", ...content_style]
 
-    if(props.visible){
-        classes.push('modal-window--active');
-        document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
+    if(visible){
+        classes.push("modal-window__active")
+        document.documentElement.style.overflowY = 'hidden'
     }
 
-    if(props.visible) {
-        return (<>
-                <div className={classes.join(' ') + ' ' + props.window_style.join(' ')}
-                     onClick={(e) => {
-                         console.log('клик')
-                         props.setVisible(false)
-                         document.getElementsByTagName('html')[0].style.overflowY = '';
-                         e.stopPropagation();
-                     }}/>
-                <div className={`modal-window__content ${props.content_style.join(' ')}`}
-                     onClick={(e) => e.stopPropagation()}>
-                    {props.children}
-                </div>
-            </>
-        )
-    } else{
-        return null
-    }
+
+    return (
+        <div onClick={() => {
+            setVisible(false)
+            console.log('click')
+            document.documentElement.style.overflowY = ''
+        }} className={classes.join(' ')}>
+            <div onClick={(e) => {
+                e.stopPropagation()
+            }} className={classes2.join(' ')}>
+                {children}
+            </div>
+        </div>
+    )
+
 };
 
 export default ModalWindow;

@@ -4,32 +4,35 @@ $drop-menu:rgba(31, 35, 38, 1);
 
 .modal-window{
   display: none;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0 ;
+  bottom: 0;
+  background-color: $modal-background;
+
+  &__active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__content{
-    position: absolute;
-    top:-7vh;
-    padding: 30px;
-    border-radius:5px;
-    max-height:70vh;
-    width:80vw;
     background-color: white;
+    border-radius: 5px;
+    max-width: 60%;
+    height: 90%;
     overflow: auto;
-    
-    @media (max-width: 580px) {
-      padding: 5px;
+    padding-inline: 30px;
+    padding-block: 20px;
+
+    @media (max-width: 800px) {
+      max-width: 80%;
     }
   }
+
 }
 
-.modal-window--active{
-  display: block;
-  background-color: $modal-background;
-}
 
 .nav-drop{
   display: none;
