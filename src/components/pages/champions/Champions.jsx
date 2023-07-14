@@ -1,25 +1,5 @@
 import React, {useRef, Suspense, useEffect, useState} from 'react';
 import heroesUUIDS from "./heroList";
-import phoenix from '../../../images/heroes/phoenix.png'
-import jett from '../../../images/heroes/jett.png'
-import sova from '../../../images/heroes/sova.png'
-import sage from '../../../images/heroes/sage.png'
-import phoenix_first from '../../../images/heroes/phoenix-spells/first.svg'
-import phoenix_second from '../../../images/heroes/phoenix-spells/second.svg'
-import phoenix_third from '../../../images/heroes/phoenix-spells/third.svg'
-import phoenix_fourth from '../../../images/heroes/phoenix-spells/fourth.svg'
-import jett_first from '../../../images/heroes/jett-spells/first.svg'
-import jett_second from '../../../images/heroes/jett-spells/second.svg'
-import jett_third from '../../../images/heroes/jett-spells/third.svg'
-import jett_fourth from '../../../images/heroes/jett-spells/fourth.svg'
-import sova_first from '../../../images/heroes/sova-spells/first.svg'
-import sova_second from '../../../images/heroes/sova-spells/second.svg'
-import sova_third from '../../../images/heroes/sova-spells/third.svg'
-import sova_fourth from '../../../images/heroes/sova-spells/fourth.svg'
-import sage_first from '../../../images/heroes/sage-spells/first.svg'
-import sage_second from '../../../images/heroes/sage-spells/second.svg'
-import sage_third from '../../../images/heroes/sage-spells/third.svg'
-import sage_fourth from '../../../images/heroes/sage-spells/fourth.svg'
 import {changeHero} from "../../API/HeroAPI";
 import axios from "axios";
 
